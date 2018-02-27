@@ -27,7 +27,7 @@ class ShoutResponse
     }
 
     /**
-     * @param string $shout
+     * @param $shout
      *
      * @return string[]
      */
@@ -37,29 +37,30 @@ class ShoutResponse
     }
 
     /**
-     * @param string $error
+     * @param $error
      *
      * @return string[]
      */
     public function addError($error)
     {
-        array_push($this->error, $error);
+        array_push($this->errors, $error);
     }
 
     /**
+     * Return JsonResponse with shouts or errors. Tell dont ask
+     *
      * @return JsonResponse
      */
     public function doResponse()
     {
         if (count($this->errors) > 0) {
-            return new JsonResponse($this->errors, 400);
+            return new JsonResponse(['errors' => $this->errors], 400);
         }
 
         if (count($this->shouts) > 0) {
-            return new JsonResponse($this->shouts, 200);
+            return new JsonResponse(['shouts' => $this->shouts], 200);
         }
 
-        return new JsonResponse(json_encode(['0' => 'The user has not tweets']), 404);
-
+        return new JsonResponse(['error' => ['0' => 'The user has not tweets']], 404);
     }
 }

@@ -5,6 +5,7 @@ parameters:
     oauth_access_token_secret: "IeIM3svDj4nqGJDnphoYtWRWPxkLdYrRd7e4wtrjxUqNQ"
     consumer_key: "G219dYbjusw0Ssliig3FvZX77"
     consumer_secret: "ZBYBQnyQJy5q1A7m6ARcG0wslnpXDLGVXYOWLvagdfsGaylmjJ"
+    url_user_timeline: "https://api.twitter.com/1.1/statuses/user_timeline.json"
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -32,6 +33,7 @@ services:
             - '%oauth_access_token_secret%'
             - '%consumer_key%'
             - '%consumer_secret%'
+            - '%url_user_timeline%'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

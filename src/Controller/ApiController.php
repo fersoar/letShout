@@ -23,7 +23,7 @@ class ApiController extends Controller
      */
     public function getDDDTweets($name, $count, ShoutHandler $shout)
     {
-        $command = ShoutCommand::create($name, $count);
+        $command = ShoutCommand::create($name, $count); //'Named constructors'
         $response = $shout->execute($command);
 
         return $response;

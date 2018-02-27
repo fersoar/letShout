@@ -25,7 +25,7 @@ class Tweet
     }
 
     /**
-     * It shout the tweet
+     * It shout the tweet. Tell dont ask
      *
      * @return string[]
      */

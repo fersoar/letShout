@@ -10,7 +10,7 @@ class TwitterParserHandler
     private $rawResponse;
 
     /**     *
-     * @var \ShoutResponse $response
+     * @var ShoutResponse $response
      */
     private $response;
 
@@ -34,7 +34,7 @@ class TwitterParserHandler
                 $tweet = Tweet::create($i, $item->text);
                 $this->response->addShout($tweet->toShout());
             } else {
-                $this->response->addShout($item);
+                $this->response->addError($item);
             }
         }
     }

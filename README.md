@@ -22,18 +22,13 @@ We like clean code:
     PHP 7.1
     Apache 2.4
     Credenciales para utilizar el API de Tweeter (incluidos los mios en services.yaml)
-    Extensiones PHP: 
     Composer
 
 ## Instrucciones
 
 1. Instalar los vendors con composer
-2. Probar test
-
-    ```php bin/console doctrine:database:drop```
-
-    ```php bin/console doctrine:database:create```
-3. Comprobar su funcionamiento por url o con POSTMAN: 
+2. Probar los test unitarios
+3. Comprobar su funcionamiento mediante algún script, navegador web o con POSTMAN: 
 
     ```http://localhost/proyectos/letshout/public/index.php/api/tweet-shout/{public_nickname}/{number}```
 
@@ -43,5 +38,6 @@ We like clean code:
 
 1. Para la prueba se ha utilizado Symfony 4
 2. Se han reutilizado las llamadas curl de una librería pública en github: http://github.com/j7mbo/twitter-api-php
-3. La clase TwiterParser si es propia
-4. Los test unitarios se pueden probar
+3. La clase ShoutHandler es un Servicio de Symfony y es la encargada de coordinar la logica. 
+4. La clase TwiterParser si es propia y tiene tests asociados
+5. Los tests unitarios se pueden probar

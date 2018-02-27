@@ -12,7 +12,7 @@ class ShoutHandler
     private $url;
     private $requestMethod;
 
-    public function __construct($oauth_access_token, $oauth_access_token_secret, $consumer_key, $consumer_secret)
+    public function __construct($oauth_access_token, $oauth_access_token_secret, $consumer_key, $consumer_secret, $url)
     {
         $this->settings = array(
             'oauth_access_token' => $oauth_access_token,
@@ -21,8 +21,7 @@ class ShoutHandler
             'consumer_secret' => $consumer_secret,
         );
 
-        //Should be assigned by params
-        $this->url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+        $this->url = $url;
         $this->requestMethod = 'GET';
     }
 
