@@ -36,8 +36,9 @@ We like clean code:
 
 ## Consideraciones
 
-1. Para la prueba se ha utilizado Symfony 4
-2. Se han reutilizado las llamadas curl de una librería pública en github: http://github.com/j7mbo/twitter-api-php
-3. La clase ShoutHandler es un Servicio de Symfony y es la encargada de coordinar la logica. 
-4. La clase TwiterParser si es propia y tiene tests asociados
-5. Los tests unitarios se pueden probar
+- Para la prueba se ha utilizado Symfony 4
+- Se han reutilizado las llamadas curl de una librería pública en github: http://github.com/j7mbo/twitter-api-php
+- La clase ShoutHandler es un Servicio de Symfony y es la encargada de coordinar la logica. 
+- La clase TwiterParser si es propia y tiene tests asociados
+- Los tests unitarios se pueden probar
+- No implementé ningún sistema de cacheado :(
